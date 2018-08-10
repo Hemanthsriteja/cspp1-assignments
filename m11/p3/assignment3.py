@@ -25,7 +25,6 @@ def isValidWord(word_v, hand_v, wordList_v):
         for i in hand_v:
             if i in word_v:
                 c= c+1
-    print(c)
     if c == l:
         
         return True
