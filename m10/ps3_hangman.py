@@ -1,11 +1,5 @@
-'''
-Exercise : Assignment-2
-implement the function hangman, which takes one parameter - the secretWord 
-the user is to guess. This starts up an interactive game of Hangman between 
-the user and the computer. Be sure you take advantage of the three helper functions, 
-isWordGuessed, getGuessedWord, and getAvailableLetters, 
-that you've defined in the previous part.
-'''
+# Hangman game
+#
 
 # -----------------------------------
 # Helper code
@@ -49,6 +43,37 @@ def chooseWord(wordlist):
 # so that it can be accessed from anywhere in the program
 wordlist = loadWords()
 
+def isWordGuessed(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: boolean, True if all the letters of secretWord are in lettersGuessed;
+      False otherwise
+    '''
+    # FILL IN YOUR CODE HERE...
+
+
+
+def getGuessedWord(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters and underscores that represents
+      what letters in secretWord have been guessed so far.
+    '''
+    # FILL IN YOUR CODE HERE...
+
+
+
+def getAvailableLetters(lettersGuessed):
+    '''
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters that represents what letters have not
+      yet been guessed.
+    '''
+    # FILL IN YOUR CODE HERE...
+    
+
 def hangman(secretWord):
     '''
     secretWord: string, the secret word to guess.
@@ -70,21 +95,15 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
-    pass
 
 
 
-def main():
-    '''
-    Main function for the given program
-    
-    When you've completed your hangman function, uncomment these two lines
-	and run this file to test! (hint: you might want to pick your own
-	secretWord while you're testing)
-	'''
-	# secretWord = chooseWord(wordlist).lower()
-	# hangman(secretWord)
 
 
-if __name__ == "__main__":
-    main()
+
+# When you've completed your hangman function, uncomment these two lines
+# and run this file to test! (hint: you might want to pick your own
+# secretWord while you're testing)
+
+# secretWord = chooseWord(wordlist).lower()
+# hangman(secretWord)
