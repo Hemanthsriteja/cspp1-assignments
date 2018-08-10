@@ -9,21 +9,21 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    sum_o = 0
+    sum_v = 0
     for letters in hand:
-    	sum_o= sum_o + hand[letters]
-    return sum_o
+        sum_v= sum_v + hand[letters]
+    return sum_v
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
+    n=input()
+    adict={}
+    for i in range(int(n)):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    print(calculateHandlen(adict))
+        
 
 
 if __name__== "__main__":
-	main()
+    main()
