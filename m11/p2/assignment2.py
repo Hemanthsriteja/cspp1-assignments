@@ -1,8 +1,7 @@
 #Exercise: Assignment-2
 #Implement the updateHand function. Make sure this function has no side effects: i.e., it must not mutate the hand passed in. Before pasting your function definition here, be sure you've passed the appropriate tests in test_ps4a.py.
 
-
-def updateHand(hand, word):
+def updateHand(hand_v, word_v):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -18,24 +17,24 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    a={}
-    for j in word:
-        if j in hand:
-            a[j] = hand[j]-1
-    return a
+    a_v={}
+    for j in word_v:
+        if j in hand_v:
+            a_v[j] = hand_v[j]-1
+    return a_v
 
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	data1=input()
-	print(updateHand(adict,data1))
-		
+    n_v=input()
+    a_dict={}
+    for i in range(int(n_v)):
+        data=input()
+        l=data.split()
+        a_dict[l[0]]=int(l[1])
+    data1_v=input()
+    print(updateHand(a_dict, data1_v))
+        
 
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
