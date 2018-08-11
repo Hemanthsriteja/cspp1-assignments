@@ -35,7 +35,7 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     d = {}
     data = data.split("\n")
-    for i in data:
+    for i in range(data):
         print(i)
         y = i.split(" follows ")
         d[y[0]]=y[1].split(",")
