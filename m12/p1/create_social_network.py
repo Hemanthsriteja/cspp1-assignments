@@ -34,7 +34,7 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     d = {}
-    for i in range(data):
+    for i in range(len(data)):
         x=data(i).split("\n")
         print(x)
         for j in range(x):
