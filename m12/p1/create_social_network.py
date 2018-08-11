@@ -36,12 +36,9 @@ def create_social_network(data):
     d = {}
     data = data.split("\n")
     for i in data:
-        # x=data[i].split("\n")
         print(i)
         y = i.split(" follows ")
         d[y[0]]=y[1].split(",")
-        d[y[0]]=y[1].split("follows")
-        #for j in range(x)
     return d
 def main():
     '''
