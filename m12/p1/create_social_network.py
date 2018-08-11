@@ -33,13 +33,13 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    d = {}
+    d_v = {}
     data = data.split("\n")
     for i in data:
         print(i)
-        y = i.split(" follows ")
-        d[y[0]]=y[1].split(",")
-    return d
+        y_v = i.split(" follows ")
+        d_v[y_v[0]] = y_v[1].split(",")
+    return d_v
 def main():
     '''
         handling testcase input and printing output
