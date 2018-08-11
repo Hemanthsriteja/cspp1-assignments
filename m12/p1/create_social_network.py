@@ -45,7 +45,7 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
-    lines = int(input())
+    lines = input()
     for i in range(lines):
         i += 1
         string += input()
