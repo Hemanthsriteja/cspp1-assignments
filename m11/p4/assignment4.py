@@ -20,13 +20,10 @@ def main():
     '''func'''
     n_v = input()
     adict = {}
-    for i in range(int(n_v)):
+    for _ in range(int(n_v)):
         data = input()
         l_v = data.split()
         adict[l_v[0]] = int(l_v[1])
     print(calculate_hand_len(adict))
-        
-
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
