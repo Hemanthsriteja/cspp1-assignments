@@ -1,6 +1,9 @@
 '''
 Exercise: Assignment-1
-The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+The first step is to implement some code that allows us to calculate
+the score for a single word. The function get_word_score should accept
+as input a string of lowercase letters (a word) and return the integer
+score for that word, using the game's scoring rules.
 '''
 
 def get_word_score(word_v, n_v):
@@ -18,20 +21,21 @@ def get_word_score(word_v, n_v):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    scramble_letter_values = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
-    }
+    scramble_letter_values = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4,
+                              'g': 2, 'h': 4, 'i': 1,
+                              'j': 8, 'k': 5, 'l': 1,
+                              'm': 3, 'n': 1, 'o': 1,
+                              'p': 3, 'q': 10, 'r': 1,
+                              's': 1, 't': 1, 'u': 1, 'v': 4,
+                              'w': 4, 'x': 8, 'y': 4, 'z': 10}
     sum_v = 0
-    l_v=len(word_v)
+    l_v = len(word_v)
     for j in word_v:
         if j in scramble_letter_values:
             sum_v = sum_v + scramble_letter_values[j]
     if n_v == l_v:
         sum_v = sum_v*l_v
         return sum_v + 50
-   
     return sum_v * l_v
 def main():
     '''
