@@ -11,16 +11,13 @@ def isValidWord(word_v, hand_v, wordlist_v):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
-
     Does not mutate hand or wordList.
-   
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
     c_v = 0
     l = len(wordlist_v)
-
     if word_v in wordlist_v:
         for i in hand_v:
             if i in word_v:
@@ -28,9 +25,6 @@ def isValidWord(word_v, hand_v, wordlist_v):
     if c_v == l:
         return True
     return False
-    
-
-
 def main():
     word_v = input()
     n_v = int(input())
