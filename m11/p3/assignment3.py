@@ -7,7 +7,7 @@ Testing: Make sure the test_isValidWord tests pass. In addition, you will want t
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word_v, hand_v, wordList_v):
+def isValidWord(word_v, hand_v, wordlist_v):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -18,13 +18,13 @@ def isValidWord(word_v, hand_v, wordList_v):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    c=0
-    l=len(wordList_v)
+    c = 0
+    l = len(wordlist_v)
 
-    if word_v in wordList_v:
+    if word_v in wordlist_v:
         for i in hand_v:
             if i in word_v:
-                c= c+1
+                c = c+1
     if c == l:
         
         return True
