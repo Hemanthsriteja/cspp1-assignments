@@ -18,32 +18,28 @@ def isValidWord(word_v, hand_v, wordlist_v):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    c = 0
+    c_v = 0
     l = len(wordlist_v)
 
     if word_v in wordlist_v:
         for i in hand_v:
             if i in word_v:
-                c = c+1
-    if c == l:
-        
+                c_v = c_v+1
+    if c_v == l:
         return True
     return False
     
 
 
 def main():
-    word_v=input()
-    n=int(input())
-    adict={}
-    for i in range(n):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    l2=list(input().split())
+    word_v = input()
+    n_v = int(input())
+    adict = {}
+    for i in range(n_v):
+        data = input()
+        l = data.split()
+        adict[l[0]] = int(l[1])
+    l2 = list(input().split())
     print(isValidWord(word_v,adict,l2))
-        
-
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
