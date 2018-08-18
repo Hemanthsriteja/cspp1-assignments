@@ -11,7 +11,6 @@
     Document ID is represented by the list index.
     For example: the document ID of the third document in the list is 2
     The second item of the tuple is the frequency of the word occuring in the document.
-
     Here is the sample format of the dictionary.
     {
         word1: [(doc_id, frequency),(doc_id, frequency),...],
