@@ -39,10 +39,19 @@ def word_list(text):
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
+
+        for characters in new1:
+        if characters not in stop:
+            words1.append(characters)
     '''
-    str1 = dict1.lower()
-    text = re.sub(r'[^a-z ]', '', str1).strip().split()
-    common_dict = {}
+    word11=[]
+    stop=load_stopwords("stopwords.txt")
+    str1 = text.lower()
+    lines = re.sub(r'[^a-z ]', '', str1).strip().split()
+    for words in lines:
+        if words not in stop:
+            word11.append(words)
+            print(word11)
 
 def build_search_index(docs):
     '''
