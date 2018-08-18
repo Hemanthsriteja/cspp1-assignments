@@ -20,6 +20,7 @@
         .
     }
 '''
+import re 
 
 # helper function to load the stop words from a file
 def load_stopwords(filename):
@@ -39,7 +40,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    str1= dict1.lower()
+    str1 = dict1.lower()
     new1 = re.sub(r'[^a-z ]', '', str1).strip().split()
     common_dict = {}
 
