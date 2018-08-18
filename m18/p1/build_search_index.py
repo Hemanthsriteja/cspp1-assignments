@@ -41,7 +41,7 @@ def word_list(text):
         return a list of words
     '''
     str1 = dict1.lower()
-    new1 = re.sub(r'[^a-z ]', '', str1).strip().split()
+    text = re.sub(r'[^a-z ]', '', str1).strip().split()
     common_dict = {}
 
 def build_search_index(docs):
