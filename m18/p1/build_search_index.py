@@ -44,14 +44,14 @@ def word_list(text):
         if characters not in stop:
             words1.append(characters)
     '''
-    word11=[]
-    stop=load_stopwords("stopwords.txt")
+    word_v = []
+    stop = load_stopwords("stopwords.txt")
     str1 = text.lower()
     lines = re.sub(r'[^a-z ]', '', str1).strip().split()
     for words in lines:
         if words not in stop:
-            word11.append(words)
-            print(word11)
+            word_v.append(words)
+            print(word_v)
 
 def build_search_index(docs):
     '''
