@@ -40,7 +40,7 @@ def load_words(file_name):
 
 WORDLIST_FILENAME = 'words.txt'
 
-class Message(object):
+class Message():
     ''' Grader's Implementation of Message Object '''
 
     ### DO NOT MODIFY THIS METHOD ###
@@ -54,7 +54,7 @@ class Message(object):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words
         '''
-        self.message_text = text
+        self.messagetext_v = text
         self.valid_words = load_words("words.txt")
         self.shift_dict = {}
 
@@ -65,7 +65,7 @@ class Message(object):
 
         Returns: self.message_text
         '''
-        return self.message_text
+        return self.messagetext_v
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_valid_words(self):
@@ -90,16 +90,16 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to
                  another letter (string).
         '''
-        lower_keys = list(string.ascii_lowercase)
-        lower_values = list(string.ascii_lowercase)
-        shift_lower_values = lower_values[shift:] + lower_values[:shift]
+        lowerkeys_v = list(string.ascii_lowercase)
+        lowervalues_v = list(string.ascii_lowercase)
+        shiftlowervalues_v = lowervalues_v[shift:] + lowervalues_v[:shift]
 
-        upper_keys = list(string.ascii_uppercase)
+        upperkeys_v = list(string.ascii_uppercase)
         upper_values = list(string.ascii_uppercase)
-        upper_shift_values = upper_values[shift:] + upper_values[:shift]
+        uppershiftvalues_v = upper_values[shift:] + upper_values[:shift]
 
-        full_keys = lower_keys + upper_keys
-        full_values = shift_lower_values + upper_shift_values
+        full_keys = lowerkeys_v + upperkeys_v
+        full_values = shiftlowervalues_v + uppershiftvalues_v
 
         self.shift_dict = dict(zip(full_keys, full_values))
         return self.shift_dict
@@ -118,7 +118,7 @@ class Message(object):
              down the alphabet by the input shift
         '''
         new_msg = []
-        for i in self.message_text:
+        for i in self.messagetext_v:
             if i not in self.build_shift_dict(shift).keys():
                 new_msg.append(i)
                 continue
@@ -126,13 +126,69 @@ class Message(object):
                 new_msg.append(self.build_shift_dict(shift)[i])
         return ''.join(new_msg)
 
-### Helper code End
 
+class PlaintextMessage(Message):
+    '''Implementation of the 'Plaintext message' class'''
+    def __init__(self, text, shift):
+        '''
+        Initializes a PlaintextMessage object
 
+        text (string): the message's text
+        shift (integer): the shift associated with this message
 
-### Paste your implementation of the `PlaintextMessage` class here
+        A PlaintextMessage object inherits from Message and has five attributes:
+            self.message_text (string, determined by input text)
+            self.valid_words (list, determined using helper function load_words)
+            self.shift (integer, determined by input shift)
+            self.encrypting_dict (dictionary, built using shift)
+            self.message_text_encrypted (string, created using shift)
 
+        Hint: consider using the parent class constructor so less
+        code is repeated
+        '''
+        Message.__init__(self, text)
+        self.shift = shift
+        self.encrypting_dict = self.build_shift_dict(shift)
+        self.message_text_encrypted = self.apply_shift(shift)
 
+    def get_shift(self):
+        '''
+        Used to safely access self.shift outside of the class
+
+        Returns: self.shift
+        '''
+        return self.shift
+
+    def get_encrypting_dict(self):
+        '''
+        Used to safely access a copy self.encrypting_dict outside of the class
+
+        Returns: a COPY of self.encrypting_dict
+        '''
+        return self.encrypting_dict.copy()
+
+    def get_message_text_encrypted(self):
+        '''
+        Used to safely access self.message_text_encrypted outside of the class
+
+        Returns: self.message_text_encrypted
+        '''
+        return self.message_text_encrypted[:]
+
+    def change_shift(self, new_shift):
+        '''
+        Changes self.shift of the PlaintextMessage and updates other
+        attributes determined by shift (ie. self.encrypting_dict and
+        message_text_encrypted).
+
+        shift (integer): the new shift that should be associated with this message.
+        0 <= shift < 26
+
+        Returns: nothing
+        '''
+        self.shift = new_shift
+        self.encrypting_dict = self.build_shift_dict(new_shift)
+        self.message_text_encrypted = self.apply_shift(new_shift)
 
 def main():
     ''' Function to handle testcases '''
