@@ -16,6 +16,6 @@ def main():
         data = input()
         l_v = data.split()
         a_dict[l_v[0]] = int(l_v[1])
-    print(tokenize(a_dict)
+    tokenize(a_dict)
 if __name__ == "__main__":
     main()
