@@ -19,11 +19,9 @@ def check_sudoku(sudoku):
             return False
     for i in range(9):
         for j in range(9):
-            l.append(row[j][i])
-        if "".join(sorted(l)) != "123456789":
+            row.append(row[j][i])
+        if "".join(sorted(row)) != "123456789":
             return False
-
-
 def main():
     '''
         main function to read input sudoku from console
