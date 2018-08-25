@@ -6,6 +6,8 @@ import re
 
 def clean_string(string):
     regex = re.compile('[^a-z ]')
+    regex = re.compile('[^A-Z ]')
+
     string = regex.sub('', string)
     list_ofwords = string.split(' ')
     for index in range(len(list_ofwords)):
