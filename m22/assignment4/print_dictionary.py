@@ -12,7 +12,7 @@ def print_dictionary(dict_v):
 
 def main():
     """main func"""
-    dict_v = int(input())
+    dict_v = str(input())
     print_dictionary(dict_v)
 
 if __name__ == '__main__':
