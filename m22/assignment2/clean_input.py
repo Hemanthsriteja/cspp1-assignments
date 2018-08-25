@@ -8,7 +8,7 @@ def clean_string(string):
     """clean sring"""
     regex = re.compile(r'[^a-z ]')
     string = regex.sub('', string)
-    str1 = string.replace(" ","")
+    str1 = string.replace(" ", "")
     return str1
 def main():
     """main func"""
