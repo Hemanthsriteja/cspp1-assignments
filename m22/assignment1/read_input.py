@@ -4,9 +4,9 @@ Write a python program to read multiple lines of text input and store the input 
 
 def mult_line(input_v):
 
-	list_1 = input_v
-    	list_1 = list_1.split("\n")
-    	return list_1
+    list_1 = input_v
+        #list_1 = list_1.split("\n")
+    return list_1
     # i = 2
     # for set_list in list_1:
     #     if " follows " in set_list:
