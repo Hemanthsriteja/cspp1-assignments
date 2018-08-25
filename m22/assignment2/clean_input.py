@@ -8,6 +8,7 @@ def clean_string(string):
     # regex = re.compile('[^a-z ]')
     # regex = re.compile('[^A-Z ]')
     # regex = re.compile('[^0-9 ]')
+    regex = re.compile('[^!@#$^&*() ]')
 
    # string = regex.sub(, string)
     list_ofwords = string.split(' ')
