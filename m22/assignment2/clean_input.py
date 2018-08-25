@@ -10,7 +10,7 @@ def clean_string(string):
 
     string = regex.sub('', string)
     #return string
-    list_ofwords = string.split('').strip()
+    list_ofwords = string.split('').strip('')
     for index in range(len(list_ofwords)):
         list_ofwords[index] = list_ofwords[index].strip()
     # print(list_ofwords)
