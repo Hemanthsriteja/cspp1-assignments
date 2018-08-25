@@ -8,13 +8,13 @@ def clean_string(string):
     regex = re.compile('[^a-z ]')
     
 
-    string = regex.sub(' ', string)
+    string = regex.sub('', string)
     return string
-    # list_ofwords = string.split(' ')
-    # for index in range(len(list_ofwords)):
-    #     list_ofwords[index] = list_ofwords[index].strip()
-    # # print(list_ofwords)
-    # return list_ofwords
+    list_ofwords = string.split(' ')
+    for index in range(len(list_ofwords)):
+        list_ofwords[index] = list_ofwords[index].strip()
+    # print(list_ofwords)
+    return list_ofwords
 
 def main():
     string = input()
