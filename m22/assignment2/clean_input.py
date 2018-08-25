@@ -6,7 +6,7 @@ import re
 
 def clean_string(string):
     regex = re.compile('[^a-z ]')
-    regex = re.compile('[^0-9 ]')
+    #regex = re.compile('[^0-9 ]')
 
     string = regex.sub('', string)
     return string
