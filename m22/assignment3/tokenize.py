@@ -7,7 +7,7 @@ def tokenize(a_dict):
     """token"""
     for i_i in sequence:
         a_dict[i_i] = a_dict.get(i_i, 0) + 1
-    return a_dict
+    print(a_dict)
 def main():
     '''main'''
     n_v = input()
