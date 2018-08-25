@@ -8,7 +8,7 @@ def clean_string(string):
     regex = re.compile('[^a-z ]')
 
     string = regex.sub('', string)
-    	return string
+    return string
     # list_ofwords = string.split(' ')
     # for index in range(len(list_ofwords)):
     #     list_ofwords[index] = list_ofwords[index].strip()
