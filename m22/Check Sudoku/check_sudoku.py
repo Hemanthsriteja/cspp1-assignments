@@ -22,6 +22,7 @@ def check_sudoku(sudoku):
             row.append(row[j][i])
         if "".join(sorted(row)) != "123456789":
             return False
+
 def main():
     '''
         main function to read input sudoku from console
