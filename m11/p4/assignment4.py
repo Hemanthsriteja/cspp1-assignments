@@ -17,7 +17,7 @@ def calculate_hand_len(hand):
     return sum_v
 
 def main():
-    '''func'''
+    '''func defined'''
     n_v = input()
     adict = {}
     for _ in range(int(n_v)):
@@ -27,3 +27,4 @@ def main():
     print(calculate_hand_len(adict))
 if __name__ == "__main__":
     main()
+
