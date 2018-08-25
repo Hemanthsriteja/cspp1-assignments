@@ -5,7 +5,7 @@ each word
 
 def tokenize(a_dict):
     """token"""
-    for i_i in sequence:
+    for i_i in a_dict:
         a_dict[i_i] = a_dict.get(i_i, 0) + 1
     print(a_dict)
 def main():
