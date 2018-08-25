@@ -12,8 +12,8 @@ def clean_string(string):
 
    # string = regex.sub(, string)
     list_ofwords = string.split(' ')
-    for index in range(len(list_ofwords)):
-        list_ofwords[index] = list_ofwords[index].strip()
+    # for index in range(len(list_ofwords)):
+    #     list_ofwords[index] = list_ofwords[index].strip()
     return list_ofwords
 
 def main():
