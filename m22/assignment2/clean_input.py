@@ -6,7 +6,7 @@ alphabets in both upper and lower case and numbers.
 import re
 def clean_string(string):
     """clean sring"""
-    regex = re.compile(r'[^a-z ]','[0]') 
+    regex = re.compile(r'[^a-z, 0 ]')
     string = regex.sub('', string)
     str1 = string.replace(" ", "")
     return str1
