@@ -82,6 +82,7 @@ def play_game(game_grid):
 
 
 def main():
+    """main"""
     GRID_LINES = 3
     INPUT_GRID = []
     for _ in range(GRID_LINES):
