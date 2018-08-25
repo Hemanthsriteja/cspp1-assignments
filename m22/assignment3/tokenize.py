@@ -4,9 +4,7 @@ each word
 '''
 
 def tokenize(string):
-    keys = sorted(string.keys())
-    for key in keys:
-        print(key, " - ", string[key])
+    
 
 def main():
     pass
