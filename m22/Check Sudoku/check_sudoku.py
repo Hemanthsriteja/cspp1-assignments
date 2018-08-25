@@ -17,6 +17,11 @@ def check_sudoku(sudoku):
         row = sudoku[i]
         if "".join(row.sort()) != "123456789":
             return False
+    for i in range(9):
+        for j in range(9):
+            l.append(row[j][i])
+        if "".join(sorted(l)) != "123456789":
+            return False
 
 
 def main():
